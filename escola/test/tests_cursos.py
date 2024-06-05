@@ -54,5 +54,6 @@ class CursosTestCase(APITestCase):
 
         response = self.client.put('/cursos/1/', data=data)
         self.assertEquals(response.status_code, status.HTTP_200_OK)
+        
     # def test_falhador(self):
     #     self.fail('Teste falhou de propósito, não se preocupe')

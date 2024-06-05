@@ -8,6 +8,7 @@ from django.views.decorators.cache import cache_page
 class AlunosViewSet(viewsets.ModelViewSet):
     """Exibindo todos os alunos e alunas"""
     queryset = Aluno.objects.all()
+    http_method_names = ['get', 'post', 'put', 'path']
     
     def get_serializer_class(self):
         if self.request.version == "v2":
